@@ -85,12 +85,8 @@ namespace DB_MSSQL
             string username = dataGridView1.Rows[index].Cells[1].Value.ToString();
             string usersurname = dataGridView1.Rows[index].Cells[2].Value.ToString();
 
-            string usertel = "no";// необязательное поле (Телефон)
-            string userdep = "no";// необязательное поле (Отдел)
-            if (dataGridView1.Rows[index].Cells[3].Value != null)
-                usertel = dataGridView1.Rows[index].Cells[3].Value.ToString();
-            if (dataGridView1.Rows[index].Cells[4].Value != null)
-                userdep = dataGridView1.Rows[index].Cells[4].Value.ToString();
+            string usertel = dataGridView1.Rows[index].Cells[3].Value?.ToString() ?? "no";// необязательное поле (Телефон)
+            string userdep = dataGridView1.Rows[index].Cells[4].Value?.ToString() ?? "no";// необязательное поле (Отдел)
 
             string userpos = dataGridView1.Rows[index].Cells[5].Value.ToString();
             string userexper = dataGridView1.Rows[index].Cells[6].Value.ToString();
@@ -151,14 +147,8 @@ namespace DB_MSSQL
             string userid = dataGridView1.Rows[index].Cells[0].Value.ToString();
             string username = dataGridView1.Rows[index].Cells[1].Value.ToString();
             string usersurname = dataGridView1.Rows[index].Cells[2].Value.ToString();
-
-            string usertel = "no";// необязательное поле (Телефон)
-            string userdep = "no";// необязательное поле (Отдел)
-            if (dataGridView1.Rows[index].Cells[3].Value != null)
-                usertel = dataGridView1.Rows[index].Cells[3].Value.ToString();
-            if (dataGridView1.Rows[index].Cells[4].Value != null)
-                userdep = dataGridView1.Rows[index].Cells[4].Value.ToString();
-
+            string usertel = dataGridView1.Rows[index].Cells[3].Value?.ToString() ?? "no";// необязательное поле (Телефон)
+            string userdep = dataGridView1.Rows[index].Cells[4].Value?.ToString() ?? "no";// необязательное поле (Отдел)
             string userpos = dataGridView1.Rows[index].Cells[5].Value.ToString();
             string userexper = dataGridView1.Rows[index].Cells[6].Value.ToString();
 
